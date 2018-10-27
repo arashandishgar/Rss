@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_gravity="end"
+      android:layoutDirection="rtl">
+
+  <item
+    android:id="@+id/home"
+    android:layout_gravity="end"
+    android:title="صفحه اصلی"
+    app:actionLayout="@layout/menu_counter"/>
+
+  <item
+
+    android:layout_gravity="end"
+    android:title="دسته بندی">
+    <menu>
+      <item
+        android:id="@+id/like_counter"
+        android:layout_gravity="end"
+        android:title="پسندیدها"
+        app:actionLayout="@layout/menu_counter"/>
+      <item
+        android:id="@+id/unread_counter"
+        android:layout_gravity="end"
+        android:title="خوانده نشدها"
+        app:actionLayout="@layout/menu_counter"/>
+      <item
+        android:id="@+id/switch_mode"
+        android:layout_gravity="end"
+        android:title="مد"
+        app:actionLayout="@layout/menu_switch_mode"/>
+      <item
+        android:id="@+id/contact"
+        android:layout_gravity="end"
+        android:title="تماس با ما"/>
+    </menu>
+  </item>
+</menu>

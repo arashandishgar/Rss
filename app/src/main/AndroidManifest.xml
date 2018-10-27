@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.arash.imanpour">
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+  <application
+    android:name="ir.imanpour.imanpour.main.G"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppThemeBase.NoActionBar">
+    <activity android:name="ir.imanpour.imanpour.main.ActivityMain">
+    </activity>
+
+    <receiver
+      android:name="ir.imanpour.imanpour.background.InstallReciver"
+      android:enabled="true">
+      <intent-filter>
+        <action android:name="arash"/>
+      </intent-filter>
+    </receiver>
+
+    <service
+      android:name="ir.imanpour.imanpour.background.MyService"
+      android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+    <activity android:name="ir.imanpour.imanpour.main.ActivityContact">
+    </activity>
+
+    <receiver
+      android:enabled="true"
+      android:exported="true"
+      android:name="ir.imanpour.imanpour.background.Boot">
+      <!-- android:directBootAware="true"-->
+      <intent-filter>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+        <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+      </intent-filter>
+    </receiver>
+    <receiver
+      android:enabled="true"
+      android:exported="true"
+      android:name="ir.imanpour.imanpour.background.Screen">
+      <intent-filter>
+        <action android:name="android.intent.action.SCREEN_ON"/>
+      </intent-filter>
+    </receiver>
+
+    <activity android:name="ir.imanpour.imanpour.main.ActivityPermission">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>

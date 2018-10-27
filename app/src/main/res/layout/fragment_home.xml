@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"/>
+
+  <TextView
+    android:id="@+id/textView3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="توجه برای به روز رسانی،به اول لیست آمده صفحه را روبه پایین بکشید "
+    android:textSize="18sp"
+    android:textStyle="bold"/>
+
+  <ProgressBar
+    android:id="@+id/progressBar"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="10dp"
+    android:indeterminate="false"
+    android:visibility="gone"
+    tools:visibility="visible"/>
+
+  <ImageView
+    android:id="@+id/img_isNotConnected"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:adjustViewBounds="false"
+    android:cropToPadding="false"
+    android:src="@drawable/ic_signal_wifi_off_black_24dp"
+    android:visibility="gone"/>
+
+  <android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swp_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:listitem="@layout/adapter_secoond">
+    </android.support.v7.widget.RecyclerView>
+  </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

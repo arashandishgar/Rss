@@ -1,0 +1,133 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <android.support.v7.widget.CardView
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+        <ImageView
+          android:id="@+id/thumb_img"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="0dp"
+          android:layout_marginLeft="0dp"
+          android:layout_marginRight="0dp"
+          android:layout_marginTop="8dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.0"/>
+
+        <TextView
+          android:id="@+id/title_text"
+          android:layout_width="0dp"
+          android:layout_height="43dp"
+          android:layout_alignBottom="@+id/thumb_img"
+          android:layout_centerHorizontal="true"
+          android:background="#80000000"
+          android:ellipsize="end"
+          android:gravity="center"
+          android:lines="1"
+          android:padding="8dp"
+          android:textAppearance="?android:attr/textAppearanceLargeInverse"
+          app:layout_constraintBottom_toBottomOf="@+id/thumb_img"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"/>
+      </android.support.constraint.ConstraintLayout>
+
+      <ir.imanpour.imanpour.componetofview.TextViewEx
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="14dp"
+        android:foregroundGravity="right"
+        android:maxLines="3"
+        android:textColor="@android:color/black"/>
+
+      <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:orientation="vertical"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_margin="1dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="290dp"/>
+
+          <TextView
+            android:id="@+id/txt_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="TextView"/>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:orientation="vertical"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <CheckBox
+            android:id="@+id/chkb_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="پسندیدن"/>
+        </LinearLayout>
+      </android.support.constraint.ConstraintLayout>
+
+      <TextView
+        android:id="@+id/txt_cotinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="ادامه مطلب"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"/>
+
+    </LinearLayout>
+
+
+  </android.support.v7.widget.CardView>
+</LinearLayout>
